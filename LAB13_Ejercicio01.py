@@ -24,8 +24,8 @@ def create_energy_matrix(img):
             gy = abs(int(img[i][j + 1][1]) - int(img[i][j - 1][1]))
             by = abs(int(img[i][j + 1][2]) - int(img[i][j - 1][2]))
 
-            grad_x_squared = (rx * 2) + (gx * 2) + (bx ** 2)
-            grad_y_squared = (ry * 2) + (gy * 2) + (by ** 2)
+            grad_x_squared = (rx ** 2) + (gx ** 2) + (bx ** 2)
+            grad_y_squared = (ry ** 2) + (gy ** 2) + (by ** 2)
 
             energy_matrix[i][j] = sqrt(grad_x_squared + grad_y_squared)
 
